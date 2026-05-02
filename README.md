@@ -4,6 +4,11 @@ An AI-powered portfolio management and stock analysis system that helps users an
 
 ---
 ![](1.png)
+![](2.png)
+![](3.png)
+![](4.png)
+![](5.png)
+![](6.png)
 
 
 ## 🚀 Features
