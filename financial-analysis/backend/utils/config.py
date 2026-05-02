@@ -1,0 +1,7 @@
+import os
+
+RISK_FREE_RATE_ANNUAL = float(os.getenv("RISK_FREE_RATE", "0.05"))
+TRADING_DAYS = 252
+DEFAULT_PERIOD = os.getenv("DEFAULT_PERIOD", "2y")
+MAX_TICKERS = int(os.getenv("MAX_TICKERS", "20"))
+MONTE_CARLO_SIMULATIONS = int(os.getenv("MONTE_CARLO_SIMULATIONS", "1000"))
