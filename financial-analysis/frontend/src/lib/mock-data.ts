@@ -1,0 +1,9 @@
+export const alerts = [];
+export const portfolioGrowth = [];
+export const riskReturn = [];
+export const news = [];
+export const market = [];
+export const assets = [];
+export const monteCarlo = [];
+export const distribution = [];
+export const seedAlerts = [];
