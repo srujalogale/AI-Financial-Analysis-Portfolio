@@ -7,3 +7,4 @@ export const assets = [];
 export const monteCarlo = [];
 export const distribution = [];
 export const seedAlerts = [];
+export const history = [];
