@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+yfinance
+python-multipart
+python-jose
+passlib
+sqlalchemy
