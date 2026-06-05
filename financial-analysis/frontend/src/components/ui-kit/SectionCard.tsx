@@ -1,28 +1,49 @@
 import { ReactNode } from "react";
-import { cn } from "@/lib/utils";
 
 interface SectionCardProps {
   title?: string;
   description?: string;
-  action?: ReactNode;
   children: ReactNode;
+  action?: ReactNode;
   className?: string;
   contentClassName?: string;
 }
 
-export function SectionCard({ title, description, action, children, className, contentClassName }: SectionCardProps) {
+export function SectionCard({
+  title,
+  description,
+  children,
+  action,
+  className = "",
+  contentClassName = "",
+}: SectionCardProps) {
   return (
-    <section className={cn("glass-card rounded-2xl", className)}>
-      {(title || action) && (
-        <header className="flex items-start justify-between gap-3 border-b border-border/60 px-5 py-4">
+    <div
+      className={`rounded-xl border border-border bg-background p-6 ${className}`}
+    >
+      {(title || description || action) && (
+        <div className="mb-4 flex items-start justify-between">
           <div>
-            {title && <h3 className="font-display text-base font-semibold tracking-tight">{title}</h3>}
-            {description && <p className="mt-0.5 text-xs text-muted-foreground">{description}</p>}
+            {title && (
+              <h2 className="text-xl font-semibold">
+                {title}
+              </h2>
+            )}
+
+            {description && (
+              <p className="text-sm text-muted-foreground">
+                {description}
+              </p>
+            )}
           </div>
-          {action}
-        </header>
+
+          {action && <div>{action}</div>}
+        </div>
       )}
-      <div className={cn("p-5", contentClassName)}>{children}</div>
-    </section>
+
+      <div className={contentClassName}>
+        {children}
+      </div>
+    </div>
   );
 }
